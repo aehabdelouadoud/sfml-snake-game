@@ -1,4 +1,4 @@
-# MIT License 
+# MIT License
 # Copyright (c) 2018-Today Michele Adduci <adduci@tutanota.com>
 #
 # helloapp target instructions
@@ -38,12 +38,12 @@ target_link_options(${TARGET_NAME} PRIVATE ${linker_flags})
 
 # include all the necessary directories
 target_include_directories(${TARGET_NAME}
-  PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/exports>
-  PRIVATE 
-    ${TARGET_INCLUDE_FOLDER}
-    ${CMAKE_CURRENT_SOURCE_DIR}/../hellolib/include
-    # Any other extra include required
+		PUBLIC
+				$<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/exports>
+		PRIVATE
+				${TARGET_INCLUDE_FOLDER}
+				${CMAKE_CURRENT_SOURCE_DIR}/../hellolib/include
+					# Any other extra include required
 )
 
 # link against hellolib
